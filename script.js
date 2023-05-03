@@ -31,22 +31,44 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playerSelection);
-console.log(playRound(playerSelection, computerSelection));
+// let playerSelection = "rock";
+// const computerSelection = getComputerChoice();
+// console.log(playerSelection);
+// console.log(playRound(playerSelection, computerSelection));
 
 function game() {
     // Define a variable to store the number of rounds
     var rounds = 5;
     
     // Define a for loop that iterates from 1 to rounds
-    for (var i = 1; i <= rounds; i++) {
+    for (let i = 0; i < 5; i++) {
+      playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
+      computerSelection = getComputerChoice()
       // Call the playGame function and store the result in a variable
-      var result = playRound(playerSelection, computerSelection);
+      let result = playRound(playerSelection, computerSelection);
       // Log the result with the round number
       console.log("Round " + i + ": " + result);
     }
 }
 
+// let compChoice = {Value: ""};
+//     let compChoiceInt;
+//     let playerChoiceInt;
+//     let playerChoice;
+
+//     for (let i = 0; i < 5; i++){
+//         playerChoice = prompt("Rock, Paper, or Scissors?").toLowerCase();
+//         if (playerChoice == "rock"){
+//             playerChoiceInt = 0;
+//         }
+//         else if (playerChoice == "paper"){
+//             playerChoiceInt = 1;
+//         }
+//         else if (playerChoice == "scissors")
+//         {
+//             playerChoiceInt = 2;
+//         }
+//         compChoiceInt = computerPlay(compChoice);
+//         playRound(playerChoiceInt, compChoiceInt, compChoice, playerChoice);
+//     }
 game();
